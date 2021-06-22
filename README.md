@@ -1,3 +1,3 @@
 # OnMuhasebeLITEDB
  
- ![ScreenShot](Overview/masaustu.jpg?raw=true "Title")
+ ![ScreenShot](Overview/muhasebe.jpg?raw=true "Title")

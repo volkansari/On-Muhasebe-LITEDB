@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\ILMerge.3.0.41\build\ILMerge.props" Condition="Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AB0D5F2-B5F4-4E3F-A48F-E7A218FB0AE1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Muhasebe</RootNamespace>
+    <AssemblyName>Muhasebe</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <PublishSingleFile>true</PublishSingleFile>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7EDA2529C843CB4609D3DFCC6CFBAEFE17177D09</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Muhasebe_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>muhasebe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiteDB, Version=5.0.10.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiteDB.5.0.10\lib\net45\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ShockwaveFlashObjects.13.0.4000\lib\net40\ShockwaveFlashObjects.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\packages\DockPanelSuite.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2015, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\packages\DockPanelSuite.ThemeVS2015.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Repository\GenelToplamRepository.cs" />
+    <Compile Include="Repository\TaksitlerRepository.cs" />
+    <Compile Include="RequiredFieldsChecker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RequiredFieldsChecker.Designer.cs">
+      <DependentUpon>RequiredFieldsChecker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataClass\GenelToplam.cs" />
+    <Compile Include="DataClass\Fis.cs" />
+    <Compile Include="Rapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rapor.Designer.cs">
+      <DependentUpon>Rapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataClass\Taksit.cs" />
+    <Compile Include="OdemeEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeEkleForm.Designer.cs">
+      <DependentUpon>OdemeEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdemeGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeGoruntule.Designer.cs">
+      <DependentUpon>OdemeGoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdemeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeForm.Designer.cs">
+      <DependentUpon>OdemeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data.cs" />
+    <Compile Include="FisEkleGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FisEkleGuncelle.Designer.cs">
+      <DependentUpon>FisEkleGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fisler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fisler.Designer.cs">
+      <DependentUpon>Fisler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenelToplamlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenelToplamlar.Designer.cs">
+      <DependentUpon>GenelToplamlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="IRepository\IDataColumn.cs" />
+    <Compile Include="KurAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KurAl.Designer.cs">
+      <DependentUpon>KurAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoneyType.cs" />
+    <Compile Include="MusteriEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriEkle.Designer.cs">
+      <DependentUpon>MusteriEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriGuncelle.Designer.cs">
+      <DependentUpon>MusteriGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataClass\Musteri.cs" />
+    <Compile Include="MusterilerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusterilerForm.Designer.cs">
+      <DependentUpon>MusterilerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sabitler.cs" />
+    <EmbeddedResource Include="MusteriGuncelle.resx">
+      <DependentUpon>MusteriGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rapor.resx">
+      <DependentUpon>Rapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeEkleForm.resx">
+      <DependentUpon>OdemeEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeGoruntule.resx">
+      <DependentUpon>OdemeGoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeForm.resx">
+      <DependentUpon>OdemeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FisEkleGuncelle.resx">
+      <DependentUpon>FisEkleGuncelle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fisler.resx">
+      <DependentUpon>Fisler.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenelToplamlar.resx">
+      <DependentUpon>GenelToplamlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KurAl.resx">
+      <DependentUpon>KurAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriEkle.resx">
+      <DependentUpon>MusteriEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusterilerForm.resx">
+      <DependentUpon>MusterilerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Muhasebe_TemporaryKey.pfx" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Binaries\LiteDB.dll" />
+    <EmbeddedResource Include="Binaries\Microsoft.CSharp.dll" />
+    <EmbeddedResource Include="Binaries\System.Data.DataSetExtensions.dll" />
+    <EmbeddedResource Include="Binaries\System.Data.dll" />
+    <EmbeddedResource Include="Binaries\System.Deployment.dll" />
+    <EmbeddedResource Include="Binaries\System.dll" />
+    <EmbeddedResource Include="Binaries\System.Drawing.dll" />
+    <EmbeddedResource Include="Binaries\System.Net.Http.dll" />
+    <EmbeddedResource Include="Binaries\System.Runtime.dll" />
+    <EmbeddedResource Include="Binaries\System.Windows.Forms.dll" />
+    <EmbeddedResource Include="Binaries\System.Xml.dll" />
+    <EmbeddedResource Include="Binaries\System.Xml.Linq.dll" />
+    <EmbeddedResource Include="Binaries\WeifenLuo.WinFormsUI.Docking.dll" />
+    <EmbeddedResource Include="Binaries\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll" />
+    <EmbeddedResource Include="Binaries\EnvDTE.dll" />
+    <EmbeddedResource Include="Binaries\Microsoft.MSXML.dll" />
+    <EmbeddedResource Include="Binaries\Microsoft.ReportViewer.DataVisualization.dll" />
+    <EmbeddedResource Include="Binaries\Microsoft.ReportViewer.Design.dll" />
+    <EmbeddedResource Include="Binaries\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <EmbeddedResource Include="Binaries\Microsoft.ReportViewer.WinForms.dll" />
+    <EmbeddedResource Include="Binaries\Microsoft.VisualStudio.OLE.Interop.dll" />
+    <EmbeddedResource Include="Binaries\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
+    <EmbeddedResource Include="Binaries\Microsoft.VisualStudio.Shell.Interop.dll" />
+    <EmbeddedResource Include="Binaries\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
+    <EmbeddedResource Include="Binaries\Microsoft.VisualStudio.TextManager.Interop.dll" />
+    <EmbeddedResource Include="Binaries\stdole.dll" />
+    <Content Include="muhasebe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Raporlar\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILMerge.3.0.41\build\ILMerge.props'))" />
+  </Target>
+</Project>

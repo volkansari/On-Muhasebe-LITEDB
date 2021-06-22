@@ -2,5 +2,11 @@
  
  ![ScreenShot](Overview/muhasebe.jpg?raw=true "Title")
 
-## Müşteri Ekleme ,Düzenleme ve Silme
-## Fiş Ekleme ,Düzenleme ve Silme
+## Program Özellikler
+
+1. LITEDB ile taşınabilir veritabanı
+2. Müşteri CRUD işlemleri
+3. Fiş CRUD işlemleri
+4. Güncel Kur Bilgisi Takibi
+5. Borç ve Alacakların Kur Dengesinde Takibi
+

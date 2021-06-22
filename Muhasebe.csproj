@@ -306,6 +306,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Overview\muhasebe.jpg" />
     <EmbeddedResource Include="Binaries\LiteDB.dll" />
     <EmbeddedResource Include="Binaries\Microsoft.CSharp.dll" />
     <EmbeddedResource Include="Binaries\System.Data.DataSetExtensions.dll" />
